@@ -35,8 +35,8 @@ class Record:
 
     def find_phone(self, target_phone):
         for phone in self.phones:
-         if phone.value == target_phone:
-          return phone
+            if phone.value == target_phone:
+                return phone
 
     def remove_phone(self, target_phone):
         phone = self.find_phone(target_phone)
@@ -82,7 +82,7 @@ book.add_record(svitlana_record)
      
 print(book)
 
-oleksandr = book.find_record("Oleksandr")
+oleksandr = book.find("Oleksandr")
 oleksandr.edit_phone("1234567890", "1112223333")
 
 print(oleksandr)
@@ -90,6 +90,6 @@ print(oleksandr)
 found_phone = oleksandr.find_phone("6666666666")
 print(f"{oleksandr.name}: {found_phone}")
 
-book.delete_record("Svitlana")
+book.delete("Svitlana")
 
 print(book)
